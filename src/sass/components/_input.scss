@@ -1,0 +1,150 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 4rem 0;
+
+  .input-group {
+    width: 80vw;
+    position: relative;
+    a {
+      position: absolute;
+      top: 22px;
+      right: 25px;
+      z-index: 10;
+      color: map-get($colores, light-text);
+    }
+    input,
+    select {
+      position: relative;
+      z-index: 1;
+      font-size: 14px;
+      border: 0.5px solid map-get($colores, light-text);
+      width: 80vw;
+      border-radius: 40px;
+      height: 58px;
+      padding: 2rem;
+      color: map-get($colores, light-text);
+      background-color: white;
+      &:focus-visible {
+        outline-color: map-get($colores, primary);
+      }
+      &[type="date"] {
+        background-image: url("../../../public/assets/calendar.svg");
+        background-repeat: no-repeat;
+        background-position: 90% center;
+        background-size: 5%;
+      }
+    }
+
+    select {
+      text-indent: 1.5rem;
+      appearance: none;
+      background-image: url("../../../public/assets/arrow-down.png");
+      background-repeat: no-repeat;
+      background-position: 90% center;
+      background-size: 3%;
+      padding: 1rem;
+    }
+
+    input:-internal-autofill-selected {
+      background-color: white !important;
+    }
+    input::placeholder {
+      font-style: italic;
+      font-weight: 200;
+    }
+
+    label {
+      position: absolute;
+      color: #b7b7b7;
+      top: -9px;
+      left: 20px;
+      background-color: white;
+      box-sizing: content-box;
+      padding: 0 3px;
+    }
+  }
+  .input-error {
+    input {
+      border: 2px solid map-get($colores, error);
+      border-radius: 40px;
+    }
+  }
+  .input-success {
+    input {
+      border: 0.5px solid map-get($colores, light-text);
+      border-radius: 40px;
+    }
+  }
+}
+
+.check {
+  accent-color: map-get($colores, primary);
+}
+
+.input-app {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  label {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+  input {
+    border: 0.5px solid map-get($colores, light-text);
+    padding: 1rem;
+    border-radius: 40px;
+    -webkit-appearance: none;
+    padding-left:10%;
+    &[type="date"] {
+      background-image: url("../../../public/assets/calendar.svg");
+      background-repeat: no-repeat;
+      background-position: 90% center;
+      background-size: 5%;
+      height:100%;
+      background-color: white;
+      color: map-get($colores,secondary-text-color);
+      padding-left:10%;
+      height:48px;
+      &::-webkit-calendar-picker-indicator {
+        display: none;
+        -webkit-appearance: none;
+    }
+    }
+  }
+  select {
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+    border: 0.5px solid map-get($colores, light-text);
+    width: 100%;
+    border-radius: 40px;
+    height: 48px;
+    padding: 2rem;
+    color: map-get($colores, light-text);
+    background-color: white;
+
+    &:focus-visible {
+      outline-color: map-get($colores, primary);
+    }
+    &[type="date"] {
+      background-image: url("../../../public/assets/calendar.svg");
+      background-repeat: no-repeat;
+      background-position: 90% center;
+      background-size: 5%;
+      appearance: none;
+    }
+  }
+  select {
+    text-indent: 1.5rem;
+    appearance: none;
+    background-image: url("../../../public/assets/arrow-down.png");
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 3%;
+    padding: 1rem;
+  }
+}

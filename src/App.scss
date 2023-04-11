@@ -1,0 +1,396 @@
+@import "./index.scss";
+
+.subtitle-message {
+  font-size: 0.7rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  &_error {
+    color: map-get($colores, error);
+    margin-bottom: 1rem;
+    &--input {
+      font-size: 0.7rem;
+      text-align: center;
+    }
+  }
+  &_general {
+    color: map-get($colores, btn-primary);
+    margin-top: 2.5rem;
+    font-weight: 500;
+  }
+}
+
+.sign-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  h2 {
+    font-size: 1.2rem;
+    color: map-get($colores, primary);
+    font-weight: 600;
+    width: 80vw;
+    list-style: 1em;
+  }
+  p {
+    color: map-get($colores, light-text);
+    margin-top: 0.5rem;
+    font-weight: 300;
+  }
+}
+
+.mt-5 {
+  margin-top: 1rem;
+}
+
+.result-title {
+  font-size: 1.7rem;
+  color: map-get($colores, primary);
+  text-align: center;
+  font-weight: 700;
+  padding: 0 2rem;
+  align-self: end;
+}
+
+.result-text {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0 2rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+
+  &_multi {
+    align-self: end;
+    padding: 0 4rem;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  &_multi-color {
+    font-size: 1.2rem;
+    padding: 0 3rem;
+    align-self: center;
+    font-weight: bold;
+    color: map-get($colores, primary);
+  }
+}
+
+.email-request {
+  margin-top: 2rem;
+}
+
+.welcome {
+  color: map-get($colores, primary-text-color);
+  width: 23rem;
+  margin: 2rem 0;
+
+  text-align: left;
+}
+
+.css-51p66-MuiSlider-root {
+  color: map-get($colores, primary) !important;
+}
+.css-qx5f9e-MuiSlider-rail,
+.css-ada0pd-MuiSlider-track {
+  width: 0.7rem !important;
+}
+
+.FormGroup {
+  margin: 0 15px 20px;
+  padding: 0;
+  border-style: none;
+  background-color: #7795f8;
+  will-change: opacity, transform;
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 #829fff;
+  border-radius: 4px;
+}
+
+.FormRow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 15px;
+  border-top: 1px solid #819efc;
+  width: 500px;
+}
+
+.StripeElement--webkit-autofill {
+  background: transparent !important;
+}
+
+.StripeElement {
+  width: 100%;
+  padding: 11px 15px 11px 0;
+}
+
+.btn {
+  text-align: center;
+}
+
+.login-form {
+  form {
+    .input-group {
+      margin: 1rem 0;
+    }
+    justify-content: space-between;
+    
+    p {
+      margin-bottom: 3rem;
+      &.no-account {
+        margin-top: 1.7rem;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.email-validation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem 0 0 0;
+
+  &_input {
+    height: 54px;
+    width: 49px;
+    margin: 0 4px;
+    background: transparent;
+    border: none;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    box-shadow: 0px 2px 4px 2px #dadada;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+  .numbers {
+    letter-spacing: 0;
+  }
+  p {
+    width: 60%;
+  }
+}
+
+.reader-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.7rem;
+  img {
+    width: 58px;
+  }
+  p {
+    width: 80%;
+    text-align: center;
+    color: map-get($colores, primary-text-variant);
+    font-size: 0.9em;
+    margin-top: 1rem;
+    height: 3rem;
+    width: 4rem;
+  }
+}
+
+.paragraph-reader {
+  overflow-y: scroll;
+  max-height: 400px;
+  img {
+    display: block;
+    margin: 2rem auto;
+    width: 100%;
+  }
+  .info-section{
+    display:grid;
+    grid-template-columns: 1fr 6fr;
+    padding: 3rem 0;
+    img{
+      width:50%;
+      align-self: top;
+      margin:0;
+      &.indicadores{
+        width:60%;
+        margin: 1.5rem 0;
+      }
+    }
+    p{
+      margin:0;
+      text-align:left;
+    }
+  }
+  ul li {
+    margin: 1.1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.3em;
+    color: map-get($colores, secondary-text-color);
+    &:before {
+      content: "•";
+      margin-right: 0.5rem;
+    }
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  p {
+    font-size: 1.1rem;
+    color: map-get($colores, secondary-text-color);
+    margin-top: 1rem;
+    text-align: justify;
+    &.highlight-paragraph{
+      font-size: 18px;
+      font-weight:600;
+      color: map-get($colores, primary-text-variant );
+      letter-spacing: 0;
+      line-height: 20px;
+      &.italic{
+        font-style: italic;
+      }
+    }
+    strong {
+      span {
+        color: map-get($colores, btn-primary);
+      }
+    }
+  }
+  &.exercise-description_fade:after {
+    background: linear-gradient(
+      to top,
+      rgb(255, 255, 255) 20%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
+.no-scroll {
+  overflow-y: hidden;
+  height:100vh;
+
+ 
+}
+
+table {
+  color: map-get($colores, secondary-text-color);
+  margin-top: 2rem;
+  border-spacing: 1px;
+  tr td {
+    border: 1px solid black;
+    font-size: 0.8em;
+    padding: 0.5rem;
+  }
+}
+.resaltado {
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.ml-5 {
+  margin-left: 2rem;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  .indicator {
+    margin: 0;
+    align-items: center;
+  }
+  span svg path {
+    fill: map-get($colores, btn-primary);
+  }
+}
+
+span.selected-test {
+  background-color: red;
+}
+
+.loading {
+  width: 100%;
+  height: 150px;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 10px dotted map-get($colores, btn-primary);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.info-video {
+  position: absolute;
+  z-index: 10;
+ height:100%;
+ top:0;
+ background-color: rgba(black,0.9);
+ display:flex;
+ align-items: center;
+ animation: zoom 0.3s ease-in-out forwards;
+width:100vw;
+  video {
+    width: 100%;
+    &::-webkit-media-controls {
+      display: none;
+    }
+  }
+  img{
+    position: absolute;
+    z-index:1;
+    right:10px;
+    top: 10px;
+
+  }
+}
+
+.info-pill{
+  background-color:rgba(map-get($colores,user-traslucid),0.4);
+  border-radius: 2.5px;
+  height:12px;
+  width: 80%;
+  text-align: center;
+  h3{
+    font-size:10px;
+    font-weight: 300;
+  }
+}
+
+.login_container{
+  height: 6rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+}
+
+.fav-tool{
+  position: relative;
+  .fav_button{
+    width:25px;
+    position: absolute;
+    top: 0;
+    right:0;
+    margin:0;
+    opacity:0.4;
+    z-index:5;
+    &-selected{
+      opacity:1;
+    }
+  }
+
+}

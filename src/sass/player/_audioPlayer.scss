@@ -1,0 +1,180 @@
+.audio-player {
+  display: grid;
+  grid-template-rows: 300px 100px 63px auto;
+  .controls {
+    height: 150px;
+    // position: absolute;
+    // bottom: 0;
+    box-shadow: 0px -11px 11px 1px rgba(#ecdfff, 0.7);
+    border-radius: 44px 44px 0px 0px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 70% 30%;
+    .play {
+      grid-column: 4/6;
+      justify-self: center;
+      align-self: center;
+      margin: 0;
+    }
+    .backwd,
+    .fwd {
+      background-color: white;
+      color: map-get($colores, btn-primary);
+      width: auto;
+      height: auto;
+      border-radius: 5rem;
+      align-self: center;
+      grid-row: 1/2;
+
+      svg {
+        margin-top: 3px;
+        font-size: 1.2rem;
+      }
+    }
+    .backwd {
+      grid-column: 2/3;
+      justify-self: end;
+    }
+    .fwd {
+      grid-column: 7/8;
+      justify-self: start;
+    }
+    .prev-track {
+      grid-column: 3/4;
+      justify-self: end;
+    }
+    .repeat {
+      grid-row: 2/3;
+      grid-column: 4/6;
+      justify-self: center;
+      align-self: start;
+      position: relative;
+      bottom: 1rem;
+    }
+    .read-btn {
+      justify-content: flex-start;
+      width: auto;
+      img {
+        margin: 0;
+      }
+    }
+  }
+
+  .audio-position {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 85%;
+    margin: 2rem auto;
+
+    span {
+      font-size: 0.8em;
+      color: map-get($colores, secondary-text-color);
+    }
+    .progress-bar {
+      height: 5px;
+      margin: 0;
+      border-radius: 3px;
+      &-background,
+      .progress {
+        border-radius: 3px;
+      }
+    }
+  }
+  .titulo {
+    height: 100px;
+    text-align: center;
+    font-size: 1.2rem;
+
+    h2 {
+      padding: 0 15%;
+      font-weight: 300;
+      font-size: 1.45rem;
+    }
+  }
+  .padre {
+    width: 100%;
+    display: grid;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle {
+    position: relative;
+    background: rgb(206, 6, 136);
+    background: radial-gradient(
+      circle,
+      rgba(206, 6, 136, 1) 0%,
+      rgba(109, 5, 151, 0.7) 26%,
+      rgba(112, 5, 149, 0.5) 58%,
+      rgba(121, 83, 129, 0.3) 100%
+    );
+    border-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+  }
+  .interno {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    //  background: map-get($colores, hr-color);
+    background: url("https://res.cloudinary.com/dt3ggg7t5/image/upload/v1679337622/logo-sin-texto_guvju1.svg") no-repeat 45%
+      55% rgba(white, 0.9);
+    background-size: 50%;
+
+    box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 #afb6cf;
+  }
+  .fijo {
+    background-color: gray;
+    border-radius: 100px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: -1;
+  }
+}
+
+.freq-player {
+  width: 23rem;
+  height: 7.2rem;
+  box-shadow: 0px 2px 4px 2px #dadada;
+  border-radius: 20px;
+  color: map-get($colores, btn-primary );
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(12,1fr);
+  margin-bottom: 1.2rem;
+  h3{
+    font-size:10px;
+    grid-column: 1/5;
+    align-self:end;
+    margin-bottom:10px;
+    margin-left: 20px;
+  }
+  button{
+    grid-column: 10/13;
+  }
+  .download-button{
+    grid-column: 8/10;
+    bottom:0;
+  }
+  &_freq-1{
+    background-image:url("../../../public/assets/freq-1.svg");
+  
+  }
+  &_freq-2{
+    background-image:url("../../../public/assets/freq-2.svg");
+
+  }
+  &_freq-3{
+    background-image:url("../../../public/assets/freq-3.svg");
+
+  }
+}

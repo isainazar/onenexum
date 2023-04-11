@@ -1,0 +1,20 @@
+.bookmark{
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid map-get($colores, hr-color );
+    padding: 1rem 0;
+    .item-title{
+        color: map-get($colores, secondary-text-color )
+    }
+    svg{
+        align-self: center;
+        justify-self: end;
+        color: map-get($colores, btn-primary );
+    }
+    &.expand-preview{
+        border-bottom: none;
+    }
+ 
+}

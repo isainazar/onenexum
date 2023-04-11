@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/earlyaccess/nicomoji.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+}
+body {
+  overflow-x: hidden;
+}
+
+.numbers {
+  font-family: "Nico Moji";
+  font-size: 1.7rem;
+  color: map-get($colores, btn-primary);
+  letter-spacing: 1.3rem;
+  align-self: center;
+  margin-bottom: 6px;
+  &.ex {
+    color: white;
+    margin: 0;
+    letter-spacing: 0;
+    font-size: 1.4rem;
+    margin-bottom: 3px;
+  }
+}
+
+.letters-index {
+  font-size: 1.2rem;
+  color: map-get($colores, bonus-btn);
+  letter-spacing: 1.3rem;
+  align-self: center;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.title {
+  &_big {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 1rem 0;
+    letter-spacing: -2px;
+    color: map-get($colores, dark-text);
+    line-height: 2.4rem;
+    font-weight: bold;
+
+    &-name_title {
+      font-size: 2.3rem;
+      letter-spacing: -1px;
+      line-height: 0.9em;
+      font-weight: 800;
+    }
+  }
+  &_mayus {
+    color: map-get($colores, light-text);
+    letter-spacing: 2px;
+  }
+  &_medium {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+  &_small {
+    color: map-get($colores, light-text);
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 0.8rem;
+    font-weight: 600;
+  }
+
+  &_intro {
+    font-weight: 800;
+    font-size: 2.2rem;
+    text-align: center;
+    line-height: 0.9em;
+    color: map-get($colores, primary-text-variant);
+    align-self: center;
+  }
+
+  &_info {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: map-get($colores, primary-text-variant);
+    line-height: 1.4rem;
+    text-align: center;
+    align-self: center;
+  }
+
+  &_header {
+    font-size: 1rem;
+    font-weight: 700;
+    color: map-get($colores, btn-primary);
+    margin-left: 1rem;
+  }
+
+  &_guia {
+    font-size: 1.9rem;
+    line-height: 1.1em;
+    justify-self: center;
+    font-weight: 600;
+    color: map-get($colores, primary-text-variant);
+    margin: 1rem 0;
+  }
+  &_exercise {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: map-get($colores, primary-text-variant);
+    align-self: center;
+  }
+  &_ex_inner {
+    font-size: 1.7rem;
+  }
+  &_user {
+    font-size: 1.5rem;
+    color: map-get($colores, user);
+    font-weight: 600;
+    justify-self: center;
+    margin: 2.2rem 0;
+  }
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+.exercise-description {
+  transition: all 1s ease-in;
+  p {
+    color: map-get($colores, secondary-text-color);
+    font-size: 1.2rem;
+    text-align: justify;
+    font-weight: 300;
+
+    &.p-test-info {
+      color: map-get($colores, primary-text-variant);
+      margin-bottom: 2rem;
+      line-height: 2rem;
+      strong {
+        font-size: 1em;
+      }
+    }
+  }
+
+  &_fade {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      content: "";
+
+      background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      pointer-events: none; /* so the text is still selectable */
+    }
+  }
+  &_reveal {
+    &:after {
+      position: absolute;
+      z-index: -2;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      content: "";
+      background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 0%
+      );
+      // pointer-events: none; /* so the text is still selectable */
+    }
+  }
+
+  &.preview {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    p {
+      width: 80%;
+      justify-self: center;
+      font-size: 1.1rem;
+      &.read-preview {
+        font-size: 0.93rem;
+      }
+    }
+  }
+}
+
+.exercise-indicator {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 300;
+  color: map-get($colores, btn-primary);
+  justify-self: center;
+  text-align: center;
+  width: 90%;
+  span {
+    font-weight: 800;
+    font-size: 1em;
+  }
+}
+.separador {
+  height: 3px;
+  width: 4.3rem;
+  background-color: map-get($colores, btn-primary);
+  &-premium {
+    width: 8rem;
+  }
+  &_big {
+    width: 100%;
+    height: 1px;
+    background-color: map-get($colores, hr-color);
+  }
+  &_bonus {
+    background-color: map-get($colores, bonus-btn);
+  }
+}
+
+.faded {
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0.7)),
+    to(rgba(0, 0, 0, 0))
+  );
+}
+
+span.see {
+  color: map-get($colores, btn-primary);
+  font-size: 0.9em;
+  font-weight: 700;
+  justify-self: center;
+
+  cursor: pointer;
+  &-bonus {
+    color: map-get($colores, bonus-btn);
+  }
+  &.ex-2 {
+    position: relative;
+    bottom: 100px;
+    z-index: 1;
+  }
+}
+
+.bigger-text {
+  h1 {
+    align-self: end;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.completed-info {
+  font-size: 1.1rem;
+  line-height: 1.2em;
+  color: map-get($colores, secondary-text-color);
+  font-weight: 300;
+  padding: 0 1rem 2rem 1rem;
+  span {
+    color: map-get($colores, btn-primary);
+    font-size: 1em;
+  }
+}
+
+.narrow {
+  padding: 0 10%;
+}
+
+.bonus-color {
+  color: map-get($colores, bonus-btn) !important;
+
+  .title_header {
+    color: map-get($colores, bonus-btn);
+  }
+  &-bg {
+    background-color: map-get($colores, bonus-btn) !important;
+  }
+}
+
+.globe-cont {
+  position: absolute;
+  top: 20px;
+  z-index: -1;
+  transition: all 0.5s;
+  svg {
+    fill: whitesmoke ;
+ 
+  }
+}
+
+.faded-right {
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+}
+.faded-left {
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    right top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+}
+
+.title-test-result {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.p-test-result {
+  color: white;
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+  strong {
+    font-size: 1em;
+  }
+}
+
+.test-title {
+  margin-left: 1.3rem;
+  color: white;
+}
+
+.sfr {
+  animation: sfr 0.5s forwards ease-in-out;
+  position: relative;
+}
+
+@keyframes sfr {
+  0% {
+    // position: absolute;
+    left: 100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.bonus_subtitle {
+  font-size: 13px;
+  color: map-get($colores, secondary-text-color);
+  padding: 0 17%;
+}
+
+.info-paragraph {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  h2.title_exercise {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    font-weight:600;
+  }
+}
+
+strong{
+  font-size:1em;
+}
+.timeLeft{
+  position: absolute;
+  bottom: 40%;
+  color: white;
+  z-index: 20;
+  left: 43vw;
+  font-weight: 600;
+  background-color:rgba(map-get($colores,btn-primary), 0.7);
+  padding: 5px 7px;
+  border-radius: 29px;
+}

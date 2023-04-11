@@ -1,0 +1,46 @@
+.daily-main{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-template-rows: auto 40px auto 80px;
+    .slider-wrapper{
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        margin:4rem 0;}
+        .emojis{
+            display:flex;
+            flex-direction: column;
+            height: 310px;
+            justify-content: space-between;
+            margin-left: 1rem;
+            span{
+              font-size: 1.5rem;
+              opacity:0.5;
+              width: 40px;
+              text-align: center;
+              transition: all 0.3s;
+          
+            }
+            .bigger{
+              transform:scale(2.5);
+              opacity:1;    
+            }
+            .big{
+              transform: scale(1.5);
+            }
+            .normal{
+              transform: scale(1.2);
+            }
+            .small{
+              transform: scale(0.6);
+            }
+            .smaller{
+              transform: scale(0.4);
+            }
+          }
+    button{
+        align-self: end;
+    }
+
+}

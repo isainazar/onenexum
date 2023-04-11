@@ -1,0 +1,40 @@
+header {
+  width: 100%;
+  padding: 1rem 0;
+  // background: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  a {
+    text-align: center;
+    .logo_landing {
+      width: 60px;
+    }
+  }
+}
+.header-premium{
+    .quit-btn{
+        position:absolute;
+        right: 30px;
+        top:20px;
+    }
+}
+.info-header,
+.info-header-2 {
+   padding: 1rem 0;
+  a {
+    .logo_landing {
+      width: 80px;
+    }
+  }
+}
+.info-header-2{
+  margin-top: 0rem;
+  padding-top: 3rem;
+}
+
+.login {
+  .logo_landing {
+    width: 110px;
+  }
+}

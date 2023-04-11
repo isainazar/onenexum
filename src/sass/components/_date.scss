@@ -1,0 +1,29 @@
+.date {
+  width: 100%;
+  height: 60%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+  text-align: center;
+  color: map-get($colores, btn-primary);
+
+  .day {
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      text-transform: capitalize;
+      font-size: 10px;
+    }
+    &.today {
+      background-color: map-get($colores, btn-primary);
+      color: white;
+      width: 110%;
+      height: 150%;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}

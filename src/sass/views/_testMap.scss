@@ -1,0 +1,43 @@
+.main-view .content {
+  &.test-map {
+    top: 15vh;
+    grid-template-rows: 60px auto 130px 80px auto auto 120px auto 4rem;
+    &__detailed {
+      grid-template-rows: 60px 50px 60px auto auto 4rem;
+      .numbers {
+        align-self: end;
+        justify-self: center;
+      }
+      .explain{
+        justify-self: center;
+      }
+      .detailed{
+        margin-bottom: 2rem;
+        min-height:450px;
+      }
+    }
+    .title_guia {
+      font-size: 1rem;
+      align-self: center;
+    }
+    .map-nav {
+      grid-template-columns: 1fr 1fr;
+      .inner-button {
+        width: 11rem;
+      }
+    }
+    .indice {
+      grid-template-rows: repeat(5, 60px);
+      margin: 2rem 0;
+    }
+    .explain.detailed {
+      font-size: 1.2rem;
+      line-height: 2rem;
+      margin: 2rem 0;
+
+    }
+  }
+  .read-unpaid {
+    @include unpaid;
+  }
+}

@@ -1,0 +1,127 @@
+.main-view {
+  .content {
+    &.content-reader {
+      min-height: 90vh;
+      top: 10vh;
+      grid-template-rows: 80px 100px 350px auto;
+      
+      &_section-b{
+      grid-template-rows: 80px 100px 400px auto 3rem;
+
+        .exercise-description.preview{
+          flex-direction: column;
+          align-items: center;
+         .read-preview{
+          margin-bottom: 2rem;
+          color: map-get($colores, user-paragraph );
+          font-size: 1.05rem;
+         }
+        }
+       
+       
+        .expand-preview{
+          .item-title{
+            color: map-get($colores, user-paragraph );
+            font-weight:bold;
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      .indicador {
+        height: 80px;
+        border-bottom: 1px solid map-get($colores, hr-color);
+        display: flex;
+        align-items: flex-end;
+        h2 {
+          margin-bottom: 1.5rem;
+          font-size: 1.42rem;
+        }
+      }
+      &_detailed {
+        grid-template-rows: 80px 100px 400px 2rem 1rem 4rem auto;
+        .indicador {
+          display: grid !important;
+          grid-template-columns: 1fr 5fr;
+          align-items: center;
+          h2 {
+            font-size: 1.1rem;
+            margin: 0;
+            font-weight: 300;
+            text-align: center;
+          }
+        }
+        .app-fwd {
+          position: relative;
+          bottom: 4rem;
+        }
+        .progress-bar {
+          width: 80%;
+          justify-self: center;
+          height: 6px;
+          border-radius: 3px;
+          &-background,
+          .progress {
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+      .app-back {
+        margin: 0;
+        position: relative;
+        right: 3rem;
+      }
+    }
+  }
+  .buttons-cont {
+    justify-content: center;
+  }
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(map-get($colores, hr-color),0.04);
+  border-radius: 50px;
+  background-image: url("https://res.cloudinary.com/dt3ggg7t5/image/upload/v1679337622/logo-sin-texto_guvju1.svg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+$images-a : ('1':'../../../public/assets/lect-a-1.svg',
+'2':'../../../public/assets/lect-a-2.svg',
+'3':'../../../public/assets/lect-a-3.svg',
+'4':'../../../public/assets/lect-a-4.svg',
+'5':'../../../public/assets/lect-a-5.svg',
+);
+$images-b : ('1':'../../../public/assets/lect-b-1.svg',
+'2':'../../../public/assets/lect-b-2.svg',
+'3':'../../../public/assets/lect-b-3.svg',
+'4':'../../../public/assets/lect-b-4.svg',
+'5':'../../../public/assets/lect-b-5.svg',
+'6':'../../../public/assets/lect-b-6.svg',
+);
+
+.read-expand{
+background-position: center 90%;
+background-repeat: no-repeat;
+}
+
+@each $number, $url in $images-a {
+  .read-expand-a_#{$number} {
+    background-image: url($url);
+  }
+}
+@each $number, $url in $images-b {
+  .read-expand-b_#{$number} {
+    background-image: url($url);
+  }
+}

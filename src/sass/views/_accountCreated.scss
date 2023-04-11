@@ -1,0 +1,37 @@
+.main-view{
+    .content{
+        &.account{
+            display:grid;
+            place-items: center;
+            grid-template-rows: 70px 120px 160px 4rem auto;
+            h2{
+                font-size: 24px;
+                align-self: end;
+            }
+            p{
+
+            }
+            .register{
+                font-size: 16px;
+                text-align: center;
+                align-self: start;
+                margin-top: 1rem;
+                width:90%;
+            }
+            .acceso{
+                font-size:16px;
+                line-height: 35px;
+                text-align: center;
+                width:90%;
+                align-self: start;
+            }
+            img{
+                position:absolute;
+                bottom: 10vh;
+            }
+            button{
+                z-index:3;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.main-view {
+  .content.decisions {
+    top: 120px;
+    display: grid;
+    place-items: center;
+    .title {
+      font-size: 1.5rem;
+      margin: 2rem 0;
+    }
+    .decisions_p {
+      font-size: 1.15rem;
+      line-height: 2rem;
+    
+    }
+    .p__footer{
+      justify-self: start;
+    }
+    h3 {
+      margin: 3rem 0;
+      font-size: 1.15rem;
+    }
+    .opciones {
+      width: 100%;
+      margin-bottom: 1.4rem;
+    }
+    .questions {
+      margin: 1rem 0 3rem 0;
+      .question {
+        width: 100%;
+        display: grid;
+        height: 3.5rem;
+        grid-template-columns: 6fr 1fr;
+        place-items: center;
+        margin: 1rem 0;
+        position:relative;
+        z-index: 4;
+        .decision-question {
+          font-size: 1rem;
+          color: map-get($colores, secondary-text-color);
+        }
+        svg {
+          justify-self: end;
+          path {
+            fill: map-get($colores, btn-primary);
+          }
+        }
+      }
+    }
+    .buttons-cont{
+      padding-bottom: 3rem;
+    }
+  }
+}

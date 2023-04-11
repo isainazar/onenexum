@@ -1,0 +1,41 @@
+$colores: (
+  "primary": #6c52ba,
+  "secondary": #dc4bf7,
+  "primary-text-color": #393939,
+  "primary-text-variant": #363636,
+  "secondary-text-color": #979797,
+  "error": #f74bb8,
+  "alert": #d04545,
+  "buton1": #8564e6,
+  "button2": #684db7,
+  "dark-text": #0d1032,
+  "light-text": #8688ac,
+  "btn-primary": #8446ff,
+  "hr-color": #d9d9d9,
+  "bonus-btn": #d512de,
+  "user": #935dff,
+  "user-paragraph": #4b4b4b,
+  "user-variant": #9d4fcc,
+  "user-traslucid": #ceb5ff,
+  "payment-p" : #494949,
+  "offer-item-p":#efefef,
+  "comp-bg" : #F0F6FE,
+);
+
+@mixin unpaid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 2rem 0;
+  p {
+    font-size: 0.85em;
+    color: map-get($colores, primary-text-variant);
+    margin-top: 1rem;
+    span {
+      color: map-get($colores, btn-primary);
+      text-decoration: underline;
+      font-size: 1em;
+    }
+  }
+}

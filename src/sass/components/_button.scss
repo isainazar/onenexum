@@ -1,0 +1,188 @@
+button {
+  border-radius: 1rem;
+  border: none;
+  background-color: map-get($colores, primary);
+  color: white;
+  margin: 5px 0;
+ /*  background: linear-gradient(
+    rgba(map-get($colores, buton1), 0.8),
+    map-get($colores, button2)
+  ); */
+  &:disabled {
+    background-color: lighten(map-get($colores, primary), 10%);
+  }
+  &.quiz-continue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 5rem;
+    color: map-get($colores, secondary-text-color);
+
+    svg {
+      color: white;
+    }
+  }
+  &.quit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 5rem;
+    background: none;
+    i {
+      color: white;
+      font-size: 1.7rem;
+    }
+  }
+  &.play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5rem;
+    background-color: map-get($colores, btn-primary);
+    //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    svg {
+      font-size: 1.6rem;
+      /* position: relative;
+      left: 2px; */
+    }
+  }
+
+  &.prev-question {
+    //  background-color: white;
+    color: map-get($colores, secondary-text-color);
+    opacity: 0.7;
+    margin: auto;
+  }
+
+  &.begin {
+    margin-top: 1rem;
+    height: 4rem;
+    width: 80vw;
+    border-radius: 3rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    &.multi {
+      margin-top: 0.8rem;
+    }
+  }
+  &.retake {
+    @extend .begin;
+    background: white;
+    color: map-get($colores, light-text);
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+
+  &.primary-action {
+    width: 14.2rem;
+    height: 4.14rem;
+    background: map-get($colores, btn-primary);
+    border-radius: 29px;
+    letter-spacing: 2px;
+    justify-self: center;
+    &__stripe{
+    background: white;
+    color:map-get($colores, btn-primary);
+
+    }
+    &_bonus{
+      background: map-get($colores, bonus-btn );
+    }
+    &_disabled {
+      background: rgba(map-get($colores, btn-primary), 0.4);
+    }
+  }
+  &.more-info {
+    background: none;
+    color: map-get($colores, btn-primary);
+    font-weight: 800;
+    align-self: start;
+  }
+  &.app-back {
+    background: white;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100px;
+    color: map-get($colores, btn-primary);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    justify-self: center;
+    margin-top: 2rem;
+    .svg-inline--fa {
+      font-size: 1.5em;
+    }
+  }
+  &.app-fwd {
+    background: map-get($colores, btn-primary);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100px;
+    justify-self: center;
+    filter: none;
+    margin: 0;
+  }
+  &.inner-button {
+    width: 7.5rem;
+    height: 3rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 30px;
+    background: none;
+    &.active {
+      background: map-get($colores, btn-primary);
+    }
+    &.bonus {
+      background: map-get($colores, bonus-btn);
+
+    }
+  }
+}
+
+.icon-btn {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 1.5rem;
+  align-items: center;
+  span {
+    margin-left: 5px;
+  }
+}
+
+.buttons-cont{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+  &_journal{
+    justify-content: center;
+  }
+ button{
+  
+  &.app-back{
+    margin:0;
+  }
+  &.quiz-button{
+    margin: 0 10px;
+  }
+ }
+}
+
+.read-btn{
+  display:flex;
+  width: 30%;
+  justify-content: space-between;
+  align-items: center;
+  font-size:0.8em;
+  color:map-get($colores, btn-primary);
+  img{
+    margin: 0 0.5rem;
+  }
+}

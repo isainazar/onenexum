@@ -1,0 +1,23 @@
+.main-view {
+    .background{
+        &.journal-bg{
+            background-color:#BA83D1 ;
+            background-image: url("../../../public/assets/background-journal.svg");
+            background-size: 30%;
+            background-position:50% 12%;
+          }
+          
+    }
+  .content {
+    &-journal {
+      top: 25vh;
+      grid-template-rows: 100px auto auto auto 6rem  4rem;
+      .buttons-cont{
+        margin:0;
+        .app-back{
+            margin:0;
+        }
+      }
+    }
+  }
+}

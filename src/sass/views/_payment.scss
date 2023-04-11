@@ -1,0 +1,81 @@
+.main-payment {
+  display: grid;
+  grid-template-rows: 60px 300px 200px 80px auto;
+  place-items: center;
+  .payment-title {
+    align-self: end;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .stripe-logo-container {
+    width: 190px;
+    height: 76px;
+    box-shadow: 0px 2px 4px 2px #dadada;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-self: end;
+  }
+  .pay-info {
+    align-self: start;
+    text-align: center;
+    padding-top: 1.5rem;
+
+    p {
+      margin: 1rem auto 0 auto;
+      font-size: 0.8rem;
+      color: map-get($colores, payment-p);
+      width: 65%;
+    }
+  }
+  .payment-footer {
+    width: 80%;
+    p {
+      margin-top: 1rem;
+      font-size: 0.7rem;
+      color: map-get($colores, secondary-text-color);
+      text-align: center;
+      line-height: 2.2em;
+      span {
+        font-size: 1em;
+        color: map-get($colores, btn-primary);
+      }
+    }
+  }
+  .waiting {
+    width: 50px;
+  }
+  &__success {
+    height: 100vh;
+    grid-template-rows: 60px 250px 300px 80px auto;
+
+    background: url("../../../public/assets/payment-success-bg.svg")
+      map-get($colores, btn-primary) no-repeat;
+    background-size: 90%;
+    background-position: center;
+
+    img {
+      align-self: end;
+    }
+    .info-text{
+        color: white;
+        align-self: start;
+        text-align: center;
+        width:80%;
+        h2{
+            font-size:1.2rem;
+            margin: 2rem 0;
+        }
+        p{
+            font-size: 0.95rem;
+            font-weight:300;
+            margin-top: 1.5rem;
+            line-height: 2.2em;
+            span{
+              font-size: 1em;
+              text-decoration: underline;
+            }
+        }
+    }
+  }
+}

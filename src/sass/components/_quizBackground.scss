@@ -1,0 +1,46 @@
+$images : ('0':'../../../public/assets/quizbg-1.jpg',
+'1':'../../../public/assets/quizbg-2.jpg',
+'2':'../../../public/assets/quizbg-3.jpg',
+'3':'../../../public/assets/quizbg-4.jpg',
+'4':'../../../public/assets/quizbg-5.jpg',
+'5':'../../../public/assets/quizbg-6.jpg',
+'6':'../../../public/assets/quizbg-7.jpg',
+'7':'../../../public/assets/quizbg-8.jpg',
+);
+
+
+
+.quizBackground{
+    height:60vh;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    
+}
+
+@each $number, $url in $images {
+    .p-#{$number} {
+      background-image: url($url);
+    }
+  }
+
+.progressBar{
+width: 80vw;
+position: absolute;
+top: 3.7rem;
+left:10vw;
+height: 5px;
+margin: auto;
+display: flex;
+justify-content: space-between;
+.dot{
+    width: calc(100%/10);
+    border-radius: 4px;
+    background-color: rgba(white,0.5);
+
+   &.completed {
+    background-color: white;
+   }
+}
+
+}

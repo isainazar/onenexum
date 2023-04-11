@@ -1,0 +1,93 @@
+.accordion {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  margin: 3rem 0;
+  &.track {
+    .accordion-header{
+      
+      svg{
+        justify-self: end;
+      }
+    }
+    .accordion-content {
+      display: flex;
+      justify-content: space-between;
+      border: none;
+      margin: 0;
+      div {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        label {
+          
+          margin:0 0 0.5rem 0;
+
+        }
+      }
+    }
+  }
+  .accordion-header {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    align-items: center;
+    svg {
+      justify-self: center;
+      path {
+        fill: map-get($colores, user);
+      }
+    }
+  }
+  .accordion-content {
+    margin: 1rem 0;
+    border-bottom: 0.5px solid map-get($colores, secondary-text-color);
+
+    div {
+      display: grid;
+      grid-template-columns: 6fr 1fr;
+      margin: 1rem 0;
+      color: map-get($colores, secondary-text-color);
+      label {
+        margin-left: 4rem;
+      }
+      input {
+        &[type="radio"] {
+          -webkit-appearance: none;
+          appearance: none;
+          background-color: #fff;
+          margin: 0;
+          color: black;
+          width: 1.5em;
+          height: 1.5em;
+          border: 0.08em solid map-get($colores, primary );
+          border-radius: 50%;
+          display: grid;
+          place-content: center;
+          justify-self: center;
+          &:checked::before {
+            content: "";
+            width: 0.99em;
+            height: 0.99em;
+            border-radius: 50%;
+            transform: scale(1);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em map-get($colores, primary);
+          }
+        }
+      }
+    }
+    &.checks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      div {
+        grid-template-columns: 2.5fr 1fr;
+
+        label {
+          margin-left: 3rem;
+        }
+        input {
+          accent-color: map-get($colores, user);
+        }
+      }
+    }
+  }
+}
